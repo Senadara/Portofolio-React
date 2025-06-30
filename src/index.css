@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:wght@400;700;900&display=swap");
+
+body {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 40%, #2a2a2a 100%);
+  color: #e0e0e0;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+/* Orbitron dipakai untuk elemen spesial */
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 700;
+  color: #bfa44d; /* Warna emas biar lebih stand out */
+}
+
+.section {
+  @apply py-8 lg:py-24 lg:h-screen flex items-center;
+}
+
+.active {
+  background: linear-gradient(45deg, #bfa44d 20%, #8d6b20 70%);
+  border-radius: 50%;
+  color: #fff;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r text-transparent bg-clip-text from-[#bfa44d] to-[#8d6b20] font-bold;
+}
+
+.bg-gradient {
+  background: linear-gradient(
+    92.23deg,
+    #bfa44d 21.43%,
+    #8d6b20 50.63%,
+    #e0c378 100%
+  );
+}
+
+.hover\:text-gold:hover {
+  color: #bfa44d;
+}
+
+.text-secondary {
+  color: #bfa44d;
+}
+
+.border-gold {
+  border-color: #bfa44d;
+}
+
+.text-gold {
+  color: #bfa44d;
+}
+
+.bg-gold {
+  background-color: #bfa44d;
+}
