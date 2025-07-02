@@ -10,7 +10,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #e0e0e0;
@@ -64,4 +68,82 @@ h1, h2, h3, h4, h5 {
 
 .bg-gold {
   background-color: #bfa44d;
+}
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes glow-border {
+  0% {
+    box-shadow: 0 0 40px 10px #bfa44d, 0 0 80px 20px #8d6b20;
+  }
+  50% {
+    box-shadow: 0 0 60px 20px #ffe082, 0 0 120px 40px #bfa44d;
+  }
+  100% {
+    box-shadow: 0 0 40px 10px #bfa44d, 0 0 80px 20px #8d6b20;
+  }
+}
+.animate-glow-border {
+  animation: glow-border 2.5s ease-in-out infinite;
+}
+
+@keyframes float-emoji {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.08) rotate(-6deg);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-float {
+  animation: float-emoji 3.5s ease-in-out infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(20deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.7) rotate(0deg);
+  }
+}
+.animate-sparkle {
+  animation: sparkle 2.2s ease-in-out infinite;
+}
+
+.animated-underline {
+  position: relative;
+  transition: border-color 0.3s;
+}
+.animated-underline:focus {
+  border-color: #bfa44d !important;
+  box-shadow: 0 2px 0 0 #bfa44d;
+}
+
+@keyframes floatBannerCode {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-40px) scale(1.1) rotate(-8deg);
+  }
 }
